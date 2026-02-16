@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professional Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="calculator" aria-label="Calculator">
+        <header class="calculator__header">
+          <div>
+            <p class="eyebrow">Professional Calculator</p>
+            <h1>Precision at your fingertips</h1>
+          </div>
+          <button class="ghost-btn" id="themeToggle" aria-label="Toggle theme">🌙</button>
+        </header>
+
+        <section class="display" aria-live="polite">
+          <p id="expression" class="display__expression">0</p>
+          <p id="result" class="display__result">0</p>
+        </section>
+
+        <section class="keypad" aria-label="Calculator keypad">
+          <button data-action="clear" class="key key--utility">AC</button>
+          <button data-action="delete" class="key key--utility">DEL</button>
+          <button data-action="percent" class="key key--utility">%</button>
+          <button data-value="/" class="key key--operator">÷</button>
+
+          <button data-value="7" class="key">7</button>
+          <button data-value="8" class="key">8</button>
+          <button data-value="9" class="key">9</button>
+          <button data-value="*" class="key key--operator">×</button>
+
+          <button data-value="4" class="key">4</button>
+          <button data-value="5" class="key">5</button>
+          <button data-value="6" class="key">6</button>
+          <button data-value="-" class="key key--operator">−</button>
+
+          <button data-value="1" class="key">1</button>
+          <button data-value="2" class="key">2</button>
+          <button data-value="3" class="key">3</button>
+          <button data-value="+" class="key key--operator">+</button>
+
+          <button data-action="sign" class="key key--utility">±</button>
+          <button data-value="0" class="key">0</button>
+          <button data-value="." class="key">.</button>
+          <button data-action="equals" class="key key--equals">=</button>
+        </section>
+      </section>
+
+      <aside class="history" aria-label="Calculation history">
+        <div class="history__header">
+          <h2>History</h2>
+          <button class="ghost-btn" id="clearHistory">Clear</button>
+        </div>
+        <ul id="historyList" class="history__list"></ul>
+      </aside>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
